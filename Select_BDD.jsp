@@ -39,7 +39,7 @@
         conn.close();
     %>
 
-<<h2>Exercice 1 : Les films entre 2000 et 2015</h2>
+<h2>Exercice 1 : Les films entre 2000 et 2015</h2>
 <%
     String sqlExercice1 = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000 AND année < 2015";
     PreparedStatement pstmtExercice1 = conn.prepareStatement(sqlExercice1);
@@ -55,7 +55,6 @@
     rsExercice1.close();
     pstmtExercice1.close();
 %>
-
 
 <h2>Exercice 2 : Année de recherche</h2>
 <p>Créer un champ de saisie permettant à l'utilisateur de choisir l'année de sa recherche.</p>
