@@ -72,6 +72,9 @@ for (int i = 1; i <= cpt; i++) {
     out.println("<br />");
 } 
 
+for (int i = 1; i <= 2; i++) {
+    out.println("<br />");
+}
 
 for (int i = 1; i <= cpt; i++) { 
     for (int j = 1; j < i; j++) {
