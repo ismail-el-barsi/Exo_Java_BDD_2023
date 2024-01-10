@@ -13,34 +13,33 @@
     String user = "mysql";
     String password = "mysql";
 
-        // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
-        Class.forName("org.mariadb.jdbc.Driver");
+    // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
+    Class.forName("org.mariadb.jdbc.Driver");
 
-        // Établir la connexion
-        Connection conn = DriverManager.getConnection(url, user, password);
-        // Exemple de requête SQL
-        String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        ResultSet rs = pstmt.executeQuery();
+    // Établir la connexion
+    Connection conn = DriverManager.getConnection(url, user, password);
 
-        // Afficher les résultats (à adapter selon vos besoins)
-        while (rs.next()) {
-            String colonne1 = rs.getString("idFilm");
-            String colonne2 = rs.getString("titre");
-            String colonne3 = rs.getString("année");
-            // Faites ce que vous voulez avec les données...
-            //Exemple d'affichage de 2 colonnes
-            out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
-        }
+    // Exemple de requête SQL
+    String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
+    PreparedStatement pstmt = conn.prepareStatement(sql);
+    ResultSet rs = pstmt.executeQuery();
 
-        // Fermer les ressources 
-        rs.close();
-        pstmt.close();
-        conn.close();
+    // Afficher les résultats (à adapter selon vos besoins)
+    while (rs.next()) {
+        String colonne1 = rs.getString("idFilm");
+        String colonne2 = rs.getString("titre");
+        String colonne3 = rs.getString("année");
+        // Faites ce que vous voulez avec les données...
+        //Exemple d'affichage de 2 colonnes
+        out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
+    }
+
+    // Ne fermez pas la connexion ici, car elle sera utilisée pour les exercices suivants
+
     %>
 
-<h2>Exercice 1 : Les films entre 2000 et 2015</h2>
-<%
+    <h2>Exercice 1 : Les films entre 2000 et 2015</h2>
+    <%
     String sqlExercice1 = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000 AND année < 2015";
     PreparedStatement pstmtExercice1 = conn.prepareStatement(sqlExercice1);
     ResultSet rsExercice1 = pstmtExercice1.executeQuery();
@@ -54,16 +53,23 @@
 
     rsExercice1.close();
     pstmtExercice1.close();
-%>
+    %>
 
-<h2>Exercice 2 : Année de recherche</h2>
-<p>Créer un champ de saisie permettant à l'utilisateur de choisir l'année de sa recherche.</p>
+    <!-- Continue with the rest of your code -->
 
-<h2>Exercice 3 : Modification du titre du film</h2>
-<p>Créer un fichier permettant de modifier le titre d'un film sur la base de son ID (ID choisi par l'utilisateur)</p>
+    <h2>Exercice 2 : Année de recherche</h2>
+    <p>Créer un champ de saisie permettant à l'utilisateur de choisir l'année de sa recherche.</p>
 
-<h2>Exercice 4 : La valeur maximum</h2>
-<p>Créer un formulaire pour saisir un nouveau film dans la base de données</p>
+    <h2>Exercice 3 : Modification du titre du film</h2>
+    <p>Créer un fichier permettant de modifier le titre d'un film sur la base de son ID (ID choisi par l'utilisateur)</p>
+
+    <h2>Exercice 4 : La valeur maximum</h2>
+    <p>Créer un formulaire pour saisir un nouveau film dans la base de données</p>
+
+    <% 
+    // Fermer la connexion à la fin de la page
+    conn.close();
+    %>
 
 </body>
 </html>
