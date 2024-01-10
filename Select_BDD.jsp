@@ -48,7 +48,7 @@ pageEncoding="UTF-8"%> <%@ page import="java.sql.*" %>
     pstmtExercice3.executeUpdate(); out.println("
     <h2>Résultats de l'Exercice 3 : Modification du titre du film</h2>
     "); out.println(rowsUpdated + " enregistrement(s) modifié(s).<br />");
-    pstmtExercice3.close(); } // Exercice 4 : Ajout d'un nouveau film String
+    pstmtExercice3.close(); } // Exercice 4 : La valeur maximum String
     newFilmTitle = request.getParameter("newFilmTitle"); String newFilmYear =
     request.getParameter("newFilmYear"); if (newFilmTitle != null && newFilmYear
     != null && !newFilmTitle.isEmpty() && !newFilmYear.isEmpty()) { String
