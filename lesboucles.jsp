@@ -61,31 +61,27 @@
 </p>
 
 <h2>Exercice 6 : Le demi losange</h2>
-<%
-// Triangle rectangle gauche en haut
-for (int i = 1; i <= cpt; i++) {
-    for (int j = 1; j <= i; j++) {
+<% 
+for (int i = 1; i <= cpt; i++) { 
+    for (int j = 1; j <= cpt - i; j++) {
+        out.print("&nbsp;&nbsp;");
+    }
+    for (int k = 1; k <= i; k++) {
         out.print("*");
     }
     out.println("<br />");
-}
+} 
 
-// Espace entre les deux triangles
-out.println("<br />");
-
-// Triangle rectangle inversé en dessous
-for (int i = cpt; i >= 1; i--) {
-    // Espace avant le deuxième triangle
-    out.print("&nbsp;&nbsp;");
-
-    for (int j = 1; j <= i; j++) {
+for (int i = 2; i <= cpt; i++) { 
+    for (int j = 1; j < i; j++) {
+        out.print("&nbsp;&nbsp;");
+    }
+    for (int k = i; k <= cpt; k++) {
         out.print("*");
     }
     out.println("<br />");
 }
 %>
-
-
 
 
 
