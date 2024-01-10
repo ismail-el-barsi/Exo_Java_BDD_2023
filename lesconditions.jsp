@@ -5,14 +5,16 @@
   </head>
   <body bgcolor="white">
     <h1>Exercices sur les conditions</h1>
+
+    <!-- Exercice 1 Form -->
     <form action="#" method="post">
       <p>
         Saisir la valeur 1 :
-        <input type="text" id="inputValeur" name="valeur1" />
+        <input type="text" id="inputValeur1" name="valeur1" />
       </p>
       <p>
         Saisir la valeur 2 :
-        <input type="text" id="inputValeur" name="valeur2" />
+        <input type="text" id="inputValeur2" name="valeur2" />
       </p>
       <p><input type="submit" value="Afficher" /></p>
     </form>
@@ -30,21 +32,22 @@
     <p>Valeur 1 est inférieure à Valeur 2.</p>
     <% } else { %>
     <p>Valeur 1 est égale à Valeur 2.</p>
-    <% } %>
+    <% } %> <% } %>
 
     <h2>Exercice 1 : Comparaison 1</h2>
+    <!-- Exercice 1 Form -->
     <form action="#" method="post">
       <p>
         Saisir la valeur A :
-        <input type="text" id="inputValeur" name="valeurA" />
+        <input type="text" id="inputValeurA" name="valeurA" />
       </p>
       <p>
         Saisir la valeur B :
-        <input type="text" id="inputValeur" name="valeurB" />
+        <input type="text" id="inputValeurB" name="valeurB" />
       </p>
       <p>
         Saisir la valeur C :
-        <input type="text" id="inputValeur" name="valeurC" />
+        <input type="text" id="inputValeurC" name="valeurC" />
       </p>
       <p><input type="submit" value="Afficher" /></p>
     </form>
@@ -65,6 +68,7 @@
     <% } %> <% } %>
 
     <h2>Exercice 2 : Pair ou Impair ?</h2>
+    <!-- Exercice 2 Form -->
     <form action="#" method="post">
       <p>
         Saisir un nombre : <input type="text" id="inputNombre" name="nombre" />
