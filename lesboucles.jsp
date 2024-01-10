@@ -62,10 +62,8 @@
 
 <h2>Exercice 6 : Le demi losange</h2>
 <% 
-int spaces;
 for (int i = 1; i <= cpt; i++) { 
-    spaces = cpt - i;
-    for (int j = 1; j <= spaces; j++) {
+    for (int j = 1; j <= cpt - i; j++) {
         out.print("&nbsp;&nbsp;");
     }
     for (int k = 1; k <= i; k++) {
@@ -75,8 +73,7 @@ for (int i = 1; i <= cpt; i++) {
 } 
 
 for (int i = 2; i <= cpt; i++) { 
-    spaces = i - 1;
-    for (int j = 1; j <= spaces; j++) {
+    for (int j = 1; j < i; j++) {
         out.print("&nbsp;&nbsp;");
     }
     for (int k = i; k <= cpt; k++) {
@@ -85,6 +82,7 @@ for (int i = 2; i <= cpt; i++) {
     out.println("<br />");
 }
 %>
+
 
 
 <h2>Exercice 7 : La table de multiplication</h2>
