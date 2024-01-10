@@ -7,7 +7,6 @@
     <title>Connexion à MariaDB via JSP</title>
 </head>
 <body>
-    <h1>Exemple de connexion à MariaDB avec JSP</h1>
     <% 
     String url = "jdbc:mariadb://localhost:3306/films";
     String user = "mysql";
