@@ -135,6 +135,6 @@ if (titreFilm != null && anneeFilm != null) {
 // Fermer la connexion à la fin de la page
 conn.close();
 %>
-
+<p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
