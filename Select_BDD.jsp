@@ -19,21 +19,6 @@
     // Établir la connexion
     Connection conn = DriverManager.getConnection(url, user, password);
 
-    // Exemple de requête SQL
-    String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
-    PreparedStatement pstmt = conn.prepareStatement(sql);
-    ResultSet rs = pstmt.executeQuery();
-
-    // Afficher les résultats (à adapter selon vos besoins)
-    while (rs.next()) {
-        String colonne1 = rs.getString("idFilm");
-        String colonne2 = rs.getString("titre");
-        String colonne3 = rs.getString("année");
-        // Faites ce que vous voulez avec les données...
-        //Exemple d'affichage de 2 colonnes
-        out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
-    }
-
     // Ne fermez pas la connexion ici, car elle sera utilisée pour les exercices suivants
 
     %>
